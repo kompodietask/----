@@ -2,20 +2,34 @@
 <html lang="el">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ΤΥΛΙΞΕ ΤΟ | Σουβλάκι Πλατεία Βικτωρίας</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
-        theme: { extend: { colors: { 'brand-orange': '#FF8C00' } } }
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Roboto', 'sans-serif'],
+            },
+            colors: {
+              'brand-orange': '#FF8C00',
+            }
+          }
+        }
       }
     </script>
     <style>
+      /* Απόκρυψη scrollbar για την μπάρα κατηγοριών */
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      html { scroll-behavior: smooth; }
     </style>
   </head>
-  <body>
+  <body class="bg-gray-50 antialiased font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
